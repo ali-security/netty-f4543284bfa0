@@ -15,10 +15,7 @@
 # ----------------------------------------------------------------------------
 name: PR Reports
 on:
-  workflow_run:
-    workflows: [ "Build PR" ]
-    types:
-      - completed
+  workflow_dispatch:
 
 env:
   MAVEN_OPTS: -Xmx6g -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.http.retryhandler.count=5 -Dmaven.wagon.httpconnectionManager.ttlSeconds=240

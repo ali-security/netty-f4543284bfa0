@@ -16,13 +16,6 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: ["4.1", "4.2"]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: ["4.1", "4.2"]
-  schedule:
-    - cron: '0 13 * * 3'
 
 env:
   MAVEN_OPTS: -Xmx6g -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false -Dmaven.wagon.http.retryhandler.count=5 -Dmaven.wagon.httpconnectionManager.ttlSeconds=240
